@@ -46,6 +46,15 @@ export default function LandingPage() {
         {/* Hero Section */}
         <section className="px-4 py-20 bg-gradient-to-r from-blue-500 to-purple-500">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="absolute top-4 left-4">
+              <Image
+                src="/wasume.png"
+                alt="Wasume Logo"
+                width={100}  // Set the width you prefer
+                height={50}  // Set the height you prefer
+                className="mx-auto mb-6"
+              />
+            </div>
             <h1 className={`text-4xl font-bold text-white mb-6 ${playfair.className}`}>
               Land interviews with AI
             </h1>
@@ -58,9 +67,7 @@ export default function LandingPage() {
               data-form="mTgMHn"
             ></div>
           </div>
-        </section>
-
-        {/* Features Section */}
+        </section>        {/* Features Section */}
         <section className="px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
