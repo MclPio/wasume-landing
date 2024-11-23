@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/wasume-landing',
+  assetPrefix: '/wasume-landing/',
 }
 
 export default nextConfig

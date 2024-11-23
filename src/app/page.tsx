@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import { Playfair_Display } from 'next/font/google';
+import { getBasePath } from '../utils/getBasePath';
 
 interface MailerLite {
   (action: 'show', options: { campaign: string }): void;
@@ -28,17 +29,17 @@ export default function LandingPage() {
     {
       title: "AI Resume Builder",
       description: "Create ATS-friendly resumes tailored to each job posting",
-      imagePath: "/feature1.svg"
+      imagePath: `${getBasePath()}/feature1.svg`
     },
     {
       title: "RAG-Powered Q&A",
       description: "Generate responses to random application questions using your information",
-      imagePath: "/feature2.svg"
+      imagePath: `${getBasePath()}/feature2.svg`
     },
     {
       title: "User Focused Design",
       description: "Eliminate all unnecessary clicks so you can focus on applying",
-      imagePath: "/feature3.svg"
+      imagePath: `${getBasePath()}/feature3.svg`
     }
   ];
 
@@ -53,7 +54,7 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="absolute top-4 left-4">
               <Image
-                src="/wasume.png"
+                src={`${getBasePath()}/wasume.png`}
                 alt="Wasume Logo"
                 width={100}  // Set the width you prefer
                 height={50}  // Set the height you prefer
