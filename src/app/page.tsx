@@ -3,11 +3,16 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { Playfair_Display } from 'next/font/google';
 
+interface MailerLite {
+  (action: 'show', options: { campaign: string }): void;
+}
+
 declare global {
   interface Window {
-    ml: any;
+    ml: MailerLite;
   }
 }
+
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 
 export default function LandingPage() {
